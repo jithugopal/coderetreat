@@ -19,4 +19,8 @@ class Cell
    def get_coordinate
       @coordinate
    end
+
+   def to_s
+      "Cell: alive = #{@alive}, coordinate = #{@coordinate}"
+   end
 end
