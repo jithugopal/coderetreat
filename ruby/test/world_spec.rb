@@ -26,6 +26,14 @@ class WorldSpec < Test::Unit::TestCase
       assert_equal(3, @world.get_live_neighbour_count(@cell1))
       assert_equal(3, @world.get_live_neighbour_count(@cell2))
       assert_equal(3, @world.get_live_neighbour_count(@cell3))
+      @world.next_generation
+      assert_equal(3, @world.get_live_neighbour_count(@cell1))
+      assert_equal(3, @world.get_live_neighbour_count(@cell2))
+      assert_equal(3, @world.get_live_neighbour_count(@cell3))
+      @world.next_generation
+      assert_equal(3, @world.get_live_neighbour_count(@cell1))
+      assert_equal(3, @world.get_live_neighbour_count(@cell2))
+      assert_equal(3, @world.get_live_neighbour_count(@cell3))
    end
 
 end
