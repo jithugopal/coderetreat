@@ -11,7 +11,8 @@ class World
       @live_cells.each do |coordinate, cell|
          traverse_neighbours(cell)
       end
-      @live_cells = @new_live_cells
+      @live_cells = @new_live_cells.clone
+      @new_live_cells={}
    end
 
    def traverse_neighbours cell
@@ -57,5 +58,9 @@ class World
          }
       }
       neighbour_count
+   end
+
+   def status
+      @live_cells
    end
 end
